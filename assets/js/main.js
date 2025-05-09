@@ -85,3 +85,13 @@ $(function() {
 	siteMenuClone();
 
 });
+
+
+// Validación de formulario
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  if (!this.checkValidity()) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+  this.classList.add('was-validated');
+}, false);
